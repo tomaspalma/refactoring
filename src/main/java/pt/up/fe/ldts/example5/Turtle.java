@@ -32,8 +32,13 @@ public class Turtle {
         return direction;
     }
 
+    public char getCharDirection() {
+        return direction.getCharRepresentationOfDirection();
+    }
+
     public void setDirection(TurtleState direction) {
         this.direction = direction;
+        direction.setTurtle(this);
     }
 
     public void execute(char command) {

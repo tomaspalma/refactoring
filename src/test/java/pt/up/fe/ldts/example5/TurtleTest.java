@@ -1,18 +1,17 @@
 package pt.up.fe.ldts.example5;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class TurtleTest {
 
     @Test
     public void testRotateLeft() {
         Turtle turtle = new Turtle(5, 5, new TurtleNorth());
-        turtle.execute('L'); assertEquals(new TurtleWest(), turtle.getDirection());
-        turtle.execute('L'); assertEquals(new TurtleSouth(), turtle.getDirection());
-        turtle.execute('L'); assertEquals(new TurtleEast(), turtle.getDirection());
-        turtle.execute('L'); assertEquals(new TurtleNorth(), turtle.getDirection());
+        turtle.execute('L'); assertEquals('W', turtle.getCharDirection());
+        turtle.execute('L'); assertEquals('S', turtle.getCharDirection());
+        turtle.execute('L'); assertEquals('E', turtle.getCharDirection());
+        turtle.execute('L'); assertEquals('N', turtle.getCharDirection());
         assertEquals(5, turtle.getRow());
         assertEquals(5, turtle.getColumn());
     }
@@ -20,10 +19,10 @@ public class TurtleTest {
     @Test
     public void testRotateRight() {
         Turtle turtle = new Turtle(5, 5, new TurtleNorth());
-        turtle.execute('R'); assertEquals(new TurtleEast(), turtle.getDirection());
-        turtle.execute('R'); assertEquals(new TurtleSouth(), turtle.getDirection());
-        turtle.execute('R'); assertEquals(new TurtleWest(), turtle.getDirection());
-        turtle.execute('R'); assertEquals(new TurtleNorth(), turtle.getDirection());
+        turtle.execute('R'); assertEquals('E', turtle.getCharDirection());
+        turtle.execute('R'); assertEquals('S', turtle.getCharDirection());
+        turtle.execute('R'); assertEquals('W', turtle.getCharDirection());
+        turtle.execute('R'); assertEquals('N', turtle.getCharDirection());
         assertEquals(5, turtle.getRow());
         assertEquals(5, turtle.getColumn());
     }

@@ -7,6 +7,9 @@ public abstract class TurtleState {
         this.turtle = turtle;
     }
 
+    public abstract char getCharRepresentationOfDirection();
+
+
     public abstract void moveForward();
     public abstract void rotateRight();
     public abstract void rotateLeft();

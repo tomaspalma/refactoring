@@ -12,25 +12,24 @@ class TurtleSpockTest extends Specification {
             turtle.execute('L' as char);
 
         then:
-            new TurtleWest() == turtle.getDirection()
+            'W' == turtle.getCharDirection()
+        and:
+            turtle.execute('L' as char);
+
+        then:
+            'S' == turtle.getCharDirection()
 
         and:
             turtle.execute('L' as char);
 
         then:
-            new TurtleSouth() == turtle.getDirection()
+            'E' == turtle.getCharDirection()
 
         and:
             turtle.execute('L' as char);
 
         then:
-            new TurtleEast() == turtle.getDirection()
-
-        and:
-            turtle.execute('L' as char);
-
-        then:
-            new TurtleNorth() == turtle.getDirection()
+            'N' == turtle.getCharDirection()
 
         and:
             5 == turtle.getRow()
@@ -46,25 +45,25 @@ class TurtleSpockTest extends Specification {
             turtle.execute('R' as char);
 
         then:
-            new TurtleEast() == turtle.getDirection()
+            'E' == turtle.getCharDirection()
 
         and:
             turtle.execute('R' as char);
 
         then:
-            new TurtleSouth() == turtle.getDirection()
+            'S' == turtle.getCharDirection()
 
         and:
             turtle.execute('R' as char);
 
         then:
-            new TurtleWest() == turtle.getDirection()
+            'W' == turtle.getCharDirection()
 
         and:
             turtle.execute('R' as char);
 
         then:
-            new TurtleNorth() == turtle.getDirection()
+            'N' == turtle.getCharDirection()
 
         and:
             5 == turtle.getRow()
@@ -74,7 +73,7 @@ class TurtleSpockTest extends Specification {
     def 'Forward'() {
         given:
             def turtleN = new Turtle(5, 5, new TurtleNorth())
-            def turtleW = new Turtle(5, 5, new TurtleWest());
+            def turtleW = new Turtle(5, 5, new TurtleWest())
             def turtleS = new Turtle(5, 5, new TurtleSouth());
             def turtleE = new Turtle(5, 5, new TurtleEast());
 
