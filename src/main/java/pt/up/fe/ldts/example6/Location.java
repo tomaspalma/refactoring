@@ -5,6 +5,18 @@ public class Location {
     private final String longitude;
     private final String name;
 
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Location(String latitude, String longitude, String name) {
         this.latitude = latitude;
         this.longitude = longitude;

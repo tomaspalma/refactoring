@@ -4,7 +4,7 @@ public class TurtleEast extends TurtleState{
 
     @Override
     public void moveForward() {
-
+        this.turtle.setColumn(this.turtle.getColumn() + 1);
     }
 
     @Override

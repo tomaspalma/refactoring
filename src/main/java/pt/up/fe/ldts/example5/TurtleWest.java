@@ -3,7 +3,7 @@ package pt.up.fe.ldts.example5;
 public class TurtleWest extends TurtleState {
     @Override
     public void moveForward() {
-
+        this.turtle.setColumn(this.turtle.getColumn() - 1);
     }
 
     @Override

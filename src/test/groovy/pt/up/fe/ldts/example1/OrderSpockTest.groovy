@@ -41,8 +41,8 @@ class OrderSpockTest extends Specification {
         def result = order.printOrder()
 
         then:
-        result == "Playstation 4(x2): 800.0\n" +
-                "Red Dead Redemption 2(x1): 50.0\n" +
+        result == "Playstation 4(x2):800.0\n" +
+                "Red Dead Redemption 2(x1):50.0\n" +
                 "Total: 850.0"
     }
 }

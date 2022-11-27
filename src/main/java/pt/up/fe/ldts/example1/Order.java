@@ -30,14 +30,14 @@ public class Order {
         StringBuffer printBuffer = new StringBuffer();
 
         for (OrderLine line : lines)
-            printBuffer.append(line.toString() + "\n");
+            printBuffer.append(line.toString()).append("\n");
     
         double total = 0;
 
         for (OrderLine line : lines)
             total += line.getProduct().getPrice() * line.getQuantity();
 
-        printBuffer.append("Total: " + getTotal());
+        printBuffer.append("Total: ").append(getTotal());
 
         return printBuffer.toString();
     }
