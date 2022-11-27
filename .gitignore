@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+bin/
+.gradle/
+out/
+build/
+node_modules/
+yarn.lock
+*.iml
+*.log
